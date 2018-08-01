@@ -248,5 +248,5 @@ Expect(helloWorld(c)).To(BeNil())
 Expect(rec.Code).To(Equal(http.StatusOK))
 Expect(rec.Body.String()).To(Equal("Hello CLΛRK!"))
 ```
-As `helloWorld` returns an error, we expect it to return nil, when everything went fine. The `Response` should then contain the specified values.
+As `helloWorld` returns an `error` object, we expect it to return nil when everything went fine. The `Response` should then contain the specified values.
 
