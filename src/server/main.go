@@ -20,5 +20,5 @@ func helloWorld(c echo.Context) error {
 
 func fancyAdd(c echo.Context) error {
 	value := c.Param("value")
-	return c.String(http.StatusOK, fmt.Sprintf("The result is %d\n", len(value)+42))
+	return c.String(http.StatusOK, fmt.Sprintf("The result is %d", len(value)+42))
 }
