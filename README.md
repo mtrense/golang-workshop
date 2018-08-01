@@ -250,3 +250,27 @@ Expect(rec.Body.String()).To(Equal("Hello CLΛRK!"))
 ```
 As `helloWorld` returns an `error` object, we expect it to return nil when everything went fine. The `Response` should then contain the specified values.
 
+### Executing a specific test suite
+
+Simple execute `ginkgo` with the directory of the suite as parameter:
+```bash
+$ ginkgo $PROJECT_ROOT/src/server
+Running Suite: Server Suite
+===========================
+Random Seed: 1533116278
+Will run 2 of 2 specs
+
+••
+Ran 2 of 2 Specs in 0.000 seconds
+SUCCESS! -- 2 Passed | 0 Failed | 0 Pending | 0 Skipped
+PASS
+
+Ginkgo ran 1 suite in 968.453591ms
+Test Suite Passed
+```
+
+# Links
+
+* [Go By Example](https://gobyexample.com)
+* [Awesome Go](https://awesome-go.com)
+* [Golang Libs](https://github.com/dreadl0ck/golang-libs)
