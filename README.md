@@ -37,16 +37,17 @@ $ go get -u github.com/onsi/gomega/...
 
 ## Utilities
 
-[**gocode**](https://github.com/nsf/gocode) Provides Intellisense and autocompletion for Go programs
-[**go-outline**](https://github.com/lukehoban/go-outline) Extracts declarations from the source tree
-[**go-symbols**](https://github.com/newhook/go-symbols) Extracts symbols and identifiers from the source tree
-[**gopkgs**](https://github.com/uudashr/gopkgs) Lists packages that are available in the current `GOPATH`
-[**gorename**](https://godoc.org/golang.org/x/tools/cmd/gorename) Provides type-safe renaming of identifiers in Go
-[**gomodifytags**](https://github.com/fatih/gomodifytags) Savely modifies tags on struct fields
-[**gotests**](https://github.com/cweill/gotests) Generates sophisticated test stubs from your code
-[**gotype-live**](https://github.com/tylerb/gotype-live) Parses and type checks code as it is written
-[**gb**](https://getgb.io) A sane build and dependency management tool for Go projects
-
+* [**gocode**](https://github.com/nsf/gocode) Provides Intellisense and autocompletion for Go programs
+* [**go-outline**](https://github.com/lukehoban/go-outline) Extracts declarations from the source tree
+* [**go-symbols**](https://github.com/newhook/go-symbols) Extracts symbols and identifiers from the source tree
+* [**gopkgs**](https://github.com/uudashr/gopkgs) Lists packages that are available in the current `GOPATH`
+* [**gorename**](https://godoc.org/golang.org/x/tools/cmd/gorename) Provides type-safe renaming of identifiers in Go
+* [**gomodifytags**](https://github.com/fatih/gomodifytags) Savely modifies tags on struct fields
+* [**gotests**](https://github.com/cweill/gotests) Generates sophisticated test stubs from your code
+* [**gotype-live**](https://github.com/tylerb/gotype-live) Parses and type checks code as it is written
+* [**gb**](https://getgb.io) A sane build and dependency management tool for Go projects
+* [**ginkgo**](https://onsi.github.io/ginkgo/) An rspec-like BDD library for Go
+* [**gomega**](https://onsi.github.io/gomega/) Expectations and Matchers for Ginkgo and other testing libraries
 
 # Setting up the project
 
@@ -57,7 +58,7 @@ $ cd <PROJECTS>/golang-workshop
 ```
 (A valid `GOPATH` is any directory that has a subdirectory called `src`)
 
-#### Configuring the `GOPATH`
+### Configuring the `GOPATH`
 
 Now prepend your newly created path to the `GOPATH` variable:
 ```bash
@@ -66,7 +67,7 @@ $ export GOPATH=$(pwd)/vendor:$(pwd):$GOPATH
 
 This adds two directories (`vendor` in the current directory and the current directory itself) to the `GOPATH`. You can easily automate that using a tool like for example [`direnv`](https://direnv.net). 
 
-#### Persistent configuration using `direnv`
+### Persistent configuration using `direnv`
 
 A proper `.envrc` for a golang project would contain something like:
 ```bash
@@ -76,7 +77,7 @@ export GOPATH=$PROJECT_ROOT/vendor:$PROJECT_ROOT:$GOPATH
 
 Adding the `vendor` directory to your `GOPATH` has the additional benefit that any golang tools that adhere to go's path conventions will work out of the box.
 
-#### Editor configuration
+### Editor configuration
 
 Editors like VS Code usually infer these paths from the environment if possible, but to be explicit about it, you can add the following configuration (for VS Code) to your **workspace** settings:
 ```json
